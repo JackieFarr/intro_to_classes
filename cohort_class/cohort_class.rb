@@ -16,6 +16,8 @@ def initialize(input_name, input_cohort)
   @cohort = input_cohort
 end
 
-
+def talk()
+  return "I can talk!"
+end
 
 end

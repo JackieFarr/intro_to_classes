@@ -24,6 +24,11 @@ class TestCohortClass < MiniTest::Test
     assert_equal("E24", student_1.cohort)
   end
 
+  def test_student_talks
+    student_1 = CohortClass.new("Jen", "E25")
+    assert_equal("I can talk!", student_1.talk)
+  end
+
 
 
 
