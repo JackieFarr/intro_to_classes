@@ -47,16 +47,38 @@ class QuidditchTeam
 # end
 
 def add_new_player(potential_new_player)
+
+  found_player = false
+
+  # loop
+  # if something
+  # found_player = true
+  # end
+  # end
+
+  # if found_player
+  #   # don't add
+  # else
+  #   # do the push - real good
+  # end
+
+  # if @players.include?(potential_new_player)
+  #       return "this player already plays for #{@team_name}, please recruit someone else."
+  #   # return nil
+  # else
+  #   @players.push(potential_new_player)
+  # end
+
   for player in @players
     if potential_new_player == player
-      return "this player already plays for #{@team_name}, please recruit someone else."
+      p "this player already plays for #{@team_name}, please recruit someone else."
     else
       @players.push(potential_new_player)
     end
   end
 end
 
-
+# above three tests rely on one function "add_new_player", here, we have included a for loop, that checks if the player already exists. If they do then that player will not be added to the list and a message will be returned. If they do not, then they will be added to the array of players.
 
 
 
