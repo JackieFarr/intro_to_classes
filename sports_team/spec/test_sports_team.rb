@@ -57,15 +57,34 @@ end
 
 def test_add_player_multiple_players_exist
   quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave", "Sara", "Jill"], "Hagrid")
-  p quidditch_1.add_new_player("Dave")
-  p quidditch_1.add_new_player("Sara")
-  p quidditch_1.add_new_player("Jill")
+  quidditch_1.add_new_player("Dave")
+  quidditch_1.add_new_player("Sara")
+  quidditch_1.add_new_player("Jill")
   quidditch_1_players = quidditch_1.players
   assert_equal(["Dave", "Sara", "Jill"], quidditch_1_players)
  assert_equal(3, quidditch_1_players.count)
 end
 
-# above three tests rely on one function "add_new_player", here, we have included a for loop, that checks if the player already exists. If they do then that player will not be added to the list and a message will be returned. If they do not, then they will be added to the array of players.
+def test_add_points__win
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave", "Sara", "Jill"], "Hagrid")
+  assert_equal(2, quidditch_1.update_points("win"))
+end
+
+def test_add_points__lose
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave", "Sara", "Jill"], "Hagrid")
+  assert_equal(0, quidditch_1.update_points("Lose") )
+end
+
+def test_add_points__draw
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave", "Sara", "Jill"], "Hagrid")
+  assert_equal(1, quidditch_1.update_points("Draw"))
+end
+
+def test_add_points__not_applicable
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave", "Sara", "Jill"], "Hagrid")
+  assert_equal("Potato is not a suitable response, please enter win, lose or draw", quidditch_1.update_points("Potato"))
+end
+
 
 
 
