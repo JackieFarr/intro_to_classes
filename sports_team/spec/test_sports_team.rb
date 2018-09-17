@@ -42,10 +42,17 @@ def test_add_new_player
   assert_equal(2, quidditch_1_players.count)
 end
 
+def test_does_player_exist__player_exists
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave"], "Hagrid")
+  possible_player_existance = quidditch_1.add_new_player("Dave")
+  assert_equal("this player already plays for Gryffindor, please recruit someone else.", possible_player_existance)
+end
 
-
-
-
-
+def test_does_player_exist__player_does_not_exist
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave"], "Hagrid")
+   quidditch_1.add_new_player("Barry")
+   quidditch_1_players = quidditch_1.players
+  assert_equal(2, quidditch_1_players.count)
+end
 
 end

@@ -32,8 +32,35 @@ class QuidditchTeam
 #   return @coach
 # end
 
-def add_new_player(player_added)
-  @players.push(player_added)
+# def add_new_player(player_added)
+#   @players.push(player_added)
+# end
+#
+# def check_player_existence(player_input)
+#   for player in @players
+#     if player_input == player
+#       return true
+#     else
+#       return false
+#     end
+#   end
+# end
+
+def add_new_player(potential_new_player)
+  for player in @players
+    if potential_new_player == player
+      return "this player already plays for #{@team_name}, please recruit someone else."
+    else
+      @players.push(potential_new_player)
+    end
+  end
 end
+
+
+
+
+
+
+
 
 end
