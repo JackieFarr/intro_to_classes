@@ -9,7 +9,7 @@
 
 class QuidditchTeam
 
-  # attr_accessor :team_name, :players, :coach
+  attr_accessor :team_name, :players, :coach
 
   def initialize(team_name_input, arr_of_players, coach_input)
     @team_name = team_name_input
@@ -17,15 +17,19 @@ class QuidditchTeam
     @coach     = coach_input
   end
 
-  def get_team_name()
-    return @team_name
-  end
-
-# quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave"], "Hagrid")
-# p quidditch_1.get_team_name()
-
-def players()
-  return @players 
-end
+#   def team_name()
+#     return @team_name
+#   end
+#
+# # quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave"], "Hagrid")
+# # p quidditch_1.get_team_name()
+#
+# def players()
+#   return @players
+# end
+#
+# def coach
+#   return @coach
+# end
 
 end
