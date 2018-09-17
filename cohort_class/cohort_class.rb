@@ -20,4 +20,8 @@ def talk()
   return "I can talk!"
 end
 
+def say_favourite_language(favourite_language_input)
+  return "I love #{favourite_language_input}"
+end
+
 end
