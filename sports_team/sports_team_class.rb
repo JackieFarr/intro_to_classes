@@ -32,4 +32,8 @@ class QuidditchTeam
 #   return @coach
 # end
 
+def add_new_player(player_added)
+  @players.push(player_added)
+end
+
 end

@@ -35,7 +35,12 @@ def test_set_coach_name
   assert_equal("Lupin", quidditch_1.coach)
 end
 
-
+def test_add_new_player
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave"], "Hagrid")
+  quidditch_1.add_new_player("Gary")
+  quidditch_1_players = quidditch_1.players
+  assert_equal(2, quidditch_1_players.count)
+end
 
 
 
