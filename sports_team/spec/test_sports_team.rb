@@ -29,7 +29,11 @@ def test_get_coach_name
   assert_equal("Hagrid", quidditch_1.coach)
 end
 
-
+def test_set_coach_name
+  quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave"], "Hagrid")
+  quidditch_1.coach = "Lupin"
+  assert_equal("Lupin", quidditch_1.coach)
+end
 
 
 
