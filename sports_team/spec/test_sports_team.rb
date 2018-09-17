@@ -10,4 +10,10 @@ class TestQuidditchTeam < MiniTest::Test
     assert_equal("Gryffindor", quidditch_1.get_team_name())
   end
 
+  def test_get_array_of_players
+    quidditch_team_players = ["Katie Bell", "Angelina Johnson", "Alicia Spinnet", "Fred Weasley", "George Weasley", "Harry Potter", "oliver Wood"]
+    quidditch_1 = QuidditchTeam.new("Gryffindor", quidditch_team_players, "Hagrid")
+    assert_equal(quidditch_team_players, quidditch_1.players)
+  end
+
 end

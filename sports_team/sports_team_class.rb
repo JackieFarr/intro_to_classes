@@ -24,4 +24,8 @@ class QuidditchTeam
 # quidditch_1 = QuidditchTeam.new("Gryffindor", ["Dave"], "Hagrid")
 # p quidditch_1.get_team_name()
 
+def players()
+  return @players 
+end
+
 end
